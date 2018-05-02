@@ -22,3 +22,28 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Schema
+
+### User
+```
+first_name :string
+last_name :string
+email :string
+role :integer
+```
+
+### Sprint
+```
+start :date
+end :date
+name :string 
+has_many :resources
+```
+
+### Resource
+```
+belongs_to :sprint, optional
+name: string
+url: string
+```
