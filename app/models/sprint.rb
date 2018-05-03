@@ -14,4 +14,6 @@ class Sprint < ApplicationRecord
   validates :name, presence: true
   validates :start, presence: true
   validates :end, presence: true
+
+  has_many :resources
 end

@@ -16,22 +16,3 @@
   @extend .flex-start-col;
   margin: 24px;
 }
-
-.sprint-card {
-  margin-top: 24px;
-
-  &--add {
-    transition: 100ms;
-
-    &:hover {
-      transform: scale(1.01, 1.02);
-      color: $white;
-      border: 1px solid $turquoise;
-      background-color: $turquoise;
-      cursor: pointer;
-      h1 {
-        color: $white; 
-      }
-    }
-  }
-}

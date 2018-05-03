@@ -1,3 +1,38 @@
 // Place all the styles related to the Sprints controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$sprint-card-border-radius: 5px;
+
+.sprint-card {
+  margin-top: 24px;
+  background-color: $white-ter;
+  border-radius: $sprint-card-border-radius;
+  box-shadow: $box-shadow;
+
+  &--add {
+    transition: 100ms;
+
+    &:hover {
+      transform: scale(1.01, 1.02);
+      color: $white;
+      border: 1px solid $turquoise;
+      background-color: $turquoise;
+      cursor: pointer;
+      h1 {
+        color: $white;
+      }
+    }
+  }
+}
+
+.sprint-text-box {
+  padding: 1.25rem;
+}
+
+.sprint-resource-box {
+  background-color: $white;
+  padding: 1.25rem;
+  border-bottom-right-radius: $sprint-card-border-radius;
+  border-bottom-left-radius: $sprint-card-border-radius;
+}

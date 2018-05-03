@@ -22,8 +22,6 @@ section.section.sprint-section
     div.box.sprint-card.sprint-card--add modal-id="modal-sprint"
       h1.title.is-5 Add new sprint
     - @sprints.each do |sprint|
-      div.box.sprint-card
-        h1.title.is-5 = sprint.name
-        h2.subtitle.is-6 = sprint.name
+      = render "sprints/card", sprint: sprint
   = render "templates/modal", id: 'modal-sprint', title: "Add new sprint"
     = render "sprints/form"

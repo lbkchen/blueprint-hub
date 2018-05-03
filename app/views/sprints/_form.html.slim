@@ -16,4 +16,9 @@
     div.control
       = f.input_field :name, label: 'Sprint name'
 
+  div.field
+    = f.label :description, class: 'label'
+    div.control
+      = f.input_field :description, as: :text, label: 'Sprint description', class: 'textarea'
+
   = f.submit class: 'button is-success'

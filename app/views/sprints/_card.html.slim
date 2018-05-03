@@ -1,6 +1,9 @@
 / Variables
 /   - sprint
 
-div.box.sprint-card
-  h1.title.is-5 = sprint.name
-  h2.subtitle.is-6 = sprint.name
+div.sprint-card
+  div.sprint-text-box
+    h1.title.is-5 = sprint.name
+    h2.subtitle.is-6 = sprint.description
+  div.sprint-resource-box
+    - sprint.resources.each do |resource|

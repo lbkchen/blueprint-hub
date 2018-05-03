@@ -34,7 +34,8 @@ class SprintsController < ApplicationController
     params.require(:sprint).permit(
       :start,
       :end,
-      :name
+      :name,
+      :description
     )
   end
 end
