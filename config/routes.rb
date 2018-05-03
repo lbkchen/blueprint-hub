@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-
   resources :resources
   resources :users, only: [:index, :show]
+  resources :sprints
 
   get '/home', to: 'pages#home'
   root to: 'pages#home'

@@ -1,0 +1,11 @@
+div.modal id="#{id}"
+  div.modal-background
+  div.modal-card
+    header.modal-card-head
+      p.modal-card-title = title || "Modal"
+      button.delete aria-label="close"
+    section.modal-card-body
+      = yield
+    / footer.modal-card-foot
+    /   button.button.is-success Save
+    /   button.button Cancel

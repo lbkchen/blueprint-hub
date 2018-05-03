@@ -1,0 +1,44 @@
+/ section.hero.is-primary
+/   div.hero-body
+/     div.container
+/       h1.title Blueprint Hub
+/       h2.subtitle Your one stop shop for all Blueprint updates
+= render "templates/navbar"
+
+section.hero.is-primary.is-medium
+  div.hero-body
+    div.container
+      h1.title Welcome to Blueprint
+      h2.subtitle :D
+  div.hero-foot
+    nav.tabs.is-boxed.is-fullwidth
+      div.container
+        ul
+          li.is-active
+            = link_to('Overview', root_path)
+          li
+            = link_to('Links', root_path)
+          li
+            = link_to('Contact', root_path)
+
+section.section.sprint-section
+  div.container
+    h1.title.is-4 Sprints
+    div.box.sprint-card.sprint-card--add modal-id="modal-sprint"
+      h1.title.is-5 Add new sprint
+    - @sprints.each do |sprint|
+      div.box.sprint-card
+        h1.title.is-5 = sprint.name
+        h2.subtitle.is-6 = sprint.name
+  = render "templates/modal", id: 'modal-sprint', title: "Add new sprint"
+    = render "sprints/form"
+
+section.section.home-section
+  div.container
+    div.columns
+      div.column
+        h1.title.is-4 Timeline
+      div.column.is-two-fifths
+        h1.title.is-4 Operations
+      div.column
+        h1.title.is-4 Links

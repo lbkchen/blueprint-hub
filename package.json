@@ -1,5 +1,8 @@
 {
   "name": "eteam-portal",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-start": "^0.0.2"
+  }
 }

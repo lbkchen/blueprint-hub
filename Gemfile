@@ -39,6 +39,9 @@ gem 'devise', '~> 4.4'
 gem 'ffaker', '~> 2.9'
 gem 'rails_admin', '~> 1.3'
 gem 'has_scope', '~> 0.7.1'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

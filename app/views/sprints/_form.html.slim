@@ -1,0 +1,17 @@
+= simple_form_for @sprint, defaults: { input_html: { class: 'input' }, label_html: { class: 'label' }, wrapper_html: { class: 'field' } } do |f|
+  div.field
+    = f.label :start, class: 'label'
+    div.control
+      = f.input_field :start, as: :date, html5: true
+
+  div.field
+    = f.label :end, class: 'label'
+    div.control
+      = f.input_field :end, as: :date, html5: true
+
+  div.field
+    = f.label :name, class: 'label'
+    div.control
+      = f.input_field :name, label: 'Sprint name'
+
+  = f.button :submit, class: 'button is-success'
