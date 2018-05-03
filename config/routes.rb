@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :sprints
 
   get '/home', to: 'pages#home'
-  root to: 'pages#home'
+  root to: 'sprints#index'
 end

@@ -11,6 +11,6 @@ $(document).on 'turbolinks:load', () ->
     e.preventDefault()
     toggleModal("modal-sprint")
 
-  $('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button').click (e) ->
+  $('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot').click (e) ->
     e.preventDefault()
     toggleModal("modal-sprint")

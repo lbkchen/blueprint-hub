@@ -1,4 +1,6 @@
 = simple_form_for @sprint, defaults: { input_html: { class: 'input' }, label_html: { class: 'label' }, wrapper_html: { class: 'field' } } do |f|
+  / = form_errors_for @sprint
+  / = yield :form_errors
   div.field
     = f.label :start, class: 'label'
     div.control
@@ -14,4 +16,4 @@
     div.control
       = f.input_field :name, label: 'Sprint name'
 
-  = f.button :submit, class: 'button is-success'
+  = f.submit class: 'button is-success'
