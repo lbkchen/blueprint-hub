@@ -3,10 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $sprint-card-border-radius: 5px;
+$sprint-accent-color: $turquoise;
 
 .sprint-card {
   margin-top: 24px;
-  background-color: $white-ter;
+  background-color: $white;
+  border: 1px solid transparent;
   border-radius: $sprint-card-border-radius;
   box-shadow: $box-shadow;
 
@@ -14,13 +16,12 @@ $sprint-card-border-radius: 5px;
     transition: 100ms;
 
     &:hover {
-      transform: scale(1.01, 1.02);
-      color: $white;
-      border: 1px solid $turquoise;
-      background-color: $turquoise;
+      color: $sprint-accent-color;
+      border: 1px solid $sprint-accent-color;
+      box-shadow: 0 2px 3px rgba($sprint-accent-color, 0.1), 0 0 0 1px rgba($sprint-accent-color, 0.1);
       cursor: pointer;
       h1 {
-        color: $white;
+        color: $sprint-accent-color;
       }
     }
   }
@@ -31,7 +32,7 @@ $sprint-card-border-radius: 5px;
 }
 
 .sprint-resource-box {
-  background-color: $white;
+  background-color: $white-ter;
   padding: 1.25rem;
   border-bottom-right-radius: $sprint-card-border-radius;
   border-bottom-left-radius: $sprint-card-border-radius;

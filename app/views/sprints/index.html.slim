@@ -23,5 +23,7 @@ section.section.sprint-section
       h1.title.is-5 Add new sprint
     - @sprints.each do |sprint|
       = render "sprints/card", sprint: sprint
+      
+
   = render "templates/modal", id: 'modal-sprint', title: "Add new sprint"
     = render "sprints/form"

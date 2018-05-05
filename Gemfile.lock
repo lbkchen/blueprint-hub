@@ -253,6 +253,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.4)
   ffaker (~> 2.9)
+  font-awesome-rails
   has_scope (~> 0.7.1)
   jbuilder (~> 2.5)
   jquery-rails

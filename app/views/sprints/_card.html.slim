@@ -7,3 +7,8 @@ div.sprint-card
     h2.subtitle.is-6 = sprint.description
   div.sprint-resource-box
     - sprint.resources.each do |resource|
+      div.field.is-grouped.is-grouped-multiline
+      div.tags.has-addons
+        a.tag.is-link.is-medium = resource.name
+        a.tag.is-white.is-medium
+          = fa_icon 'external-link'
