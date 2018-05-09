@@ -2,6 +2,7 @@ class SprintsController < ApplicationController
   def index
     @sprints = Sprint.all
     @sprint = Sprint.new
+    3.times { @sprint.objectives.build }
   end
 
   def new
@@ -9,7 +10,9 @@ class SprintsController < ApplicationController
 
   def create
     @sprint = Sprint.new(sprint_params)
+
     if @sprint.save
+      @sprint.objectives.create(sprint_params[:objectives_attributes])
       redirect_to root_path
     else
       return
@@ -35,7 +38,9 @@ class SprintsController < ApplicationController
       :start,
       :end,
       :name,
-      :description
+      :description,
+      :objectives, 
+      :objectives_attributes
     )
   end
 end

@@ -20,5 +20,12 @@
     = f.label :description, class: 'label'
     div.control
       = f.input_field :description, as: :text, label: 'Sprint description', class: 'textarea'
+  div.field
+    = f.label :objectives, class: 'label'
+    div.control
+      = f.simple_fields_for :objectives do |of|
+        = of.input_field :description
+
+
 
   = f.submit class: 'button is-success'

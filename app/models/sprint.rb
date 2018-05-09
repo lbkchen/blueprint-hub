@@ -16,4 +16,6 @@ class Sprint < ApplicationRecord
   validates :end, presence: true
 
   has_many :resources
+  has_many :objectives, inverse_of: :sprint
+  accepts_nested_attributes_for :objectives
 end

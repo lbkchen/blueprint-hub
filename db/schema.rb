@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503051437) do
+ActiveRecord::Schema.define(version: 20180509044012) do
+
+  create_table "objectives", force: :cascade do |t|
+    t.string "description"
+    t.boolean "completed"
+    t.integer "sprint_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sprint_id"], name: "index_objectives_on_sprint_id"
+  end
 
   create_table "resources", force: :cascade do |t|
     t.string "name"
