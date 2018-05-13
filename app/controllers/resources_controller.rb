@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   def index
+    @categories = Category.all
   end
 
   def new

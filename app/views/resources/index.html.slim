@@ -1,0 +1,12 @@
+= render "templates/navbar"
+
+section.hero.is-primary.is-medium
+  = render "templates/hero", active: "Links"
+
+section.section.
+  div.container
+    h1.title.is-4 Resources
+    - @categories.each do |category|
+      - category.resources.each do |resource|
+        = resource.name
+        = resource.url

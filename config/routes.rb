@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :objectives, only: [:create, :update, :destroy]
   end
 
-  get '/home', to: 'pages#home'
+  get '/home', to: 'sprints#index', as: 'home'
+  get '/links', to: 'resources#index', as: 'links'
+
   root to: 'sprints#index'
 end

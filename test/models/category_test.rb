@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: resources
+# Table name: categories
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  url        :string
-#  sprint_id  :integer
+#  priority   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Resource < ApplicationRecord
-  belongs_to :sprint, optional: true
-  has_and_belongs_to_many :categories
+require 'test_helper'
+
+class CategoryTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
