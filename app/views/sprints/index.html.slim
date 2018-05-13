@@ -1,20 +1,7 @@
 = render "templates/navbar"
 
 section.hero.is-primary.is-medium
-  div.hero-body
-    div.container
-      h1.title Welcome to Blueprint
-      h2.subtitle :D
-  div.hero-foot
-    nav.tabs.is-boxed.is-fullwidth
-      div.container
-        ul
-          li.is-active
-            = link_to('Overview', root_path)
-          li
-            = link_to('Links', root_path)
-          li
-            = link_to('Contact', root_path)
+  = render "templates/hero", active: "Overview"
 
 section.section.sprint-section
   div.container
@@ -23,7 +10,7 @@ section.section.sprint-section
       h1.title.is-5 Add new sprint
     - @sprints.each do |sprint|
       = render "sprints/card", sprint: sprint
-      
+
 
   = render "templates/modal", id: 'modal-sprint', title: "Add new sprint"
     = render "sprints/form"

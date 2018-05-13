@@ -7,9 +7,9 @@ section.hero.is-primary.is-medium
     nav.tabs.is-boxed.is-fullwidth
       div.container
         ul
-          li.is-active
+          li class=('is-active' if active == 'Overview')
             = link_to('Overview', root_path)
-          li
+          li class=('is-active' if active == 'Links')
             = link_to('Links', root_path)
-          li
+          li class=('is-active' if active == 'Contact')
             = link_to('Contact', root_path)
