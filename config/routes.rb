@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/home', to: 'sprints#index', as: 'home'
   get '/links', to: 'resources#index', as: 'links'
+  get '/paws', to: 'pages#paws', as: 'paws'
 
   root to: 'sprints#index'
 end

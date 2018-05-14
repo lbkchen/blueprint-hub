@@ -2,13 +2,21 @@
 /   - sprint
 
 div.sprint-card
-  div.sprint-text-box
+  div.sprint-title-box
     h1.title.is-5 = sprint.name
-    h2.subtitle.is-6 = sprint.description
+  div.sprint-main-box
+    div.sprint-description-box
+      h2.subtitle.is-6 = sprint.description
+    div.sprint-objectives-box
+      - sprint.objectives.each do |objective|
+        div.sprint-objective-box
+          - if objective.completed
+            = fa_icon "star"
+          - else
+            = fa_icon "star"
+          p = objective.description
   div.sprint-resource-box
-    - sprint.resources.each do |resource|
-      div.field.is-grouped.is-grouped-multiline
-      div.tags.has-addons
-        a.tag.is-link.is-medium = resource.name
-        a.tag.is-white.is-medium
-          = fa_icon 'external-link'
+    div.field.is-grouped.is-grouped-multiline
+      - sprint.resources.each do |resource|
+        div.control
+          a.tag.is-link.is-medium href="//#{resource.url}" target="_blank" = resource.name
