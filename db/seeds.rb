@@ -31,7 +31,7 @@ def create_sprints
     3.times do |i|
       sprint.objectives.create(
         description: FFaker::CheesyLingo.sentence,
-        completed: false, 
+        completed: false,
       )
     end
   end
@@ -63,7 +63,7 @@ def create_resources
         name: FFaker::CheesyLingo.title,
         url: FFaker::Youtube.url,
       )
-      CategoryResource.create(
+      CategoriesResource.create(
         category_id: Random.rand(1..Category.count),
         resource_id: resource.id,
       )

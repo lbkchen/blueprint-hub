@@ -24,7 +24,7 @@ $sprint-accent-color: $blue;
     .sprint-date {
       background-color: $blue;
       color: $white;
-      padding: 0px; 
+      padding: 0px;
 
       > img {
         height: 72px;
@@ -55,6 +55,12 @@ $sprint-accent-color: $blue;
       .sprint-resource-box {
         background-color: $blue;
         padding-left: 0px;
+      }
+      .sprint-objective-box {
+        &:hover {
+          background-color: $cyan;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -164,7 +170,13 @@ $sprint-date-width: 100px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 6px 0px;
+  padding: 10px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $white-ter;
+    cursor: pointer;
+  }
 
   > i {
     font-size: 24px;

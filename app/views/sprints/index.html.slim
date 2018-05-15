@@ -15,8 +15,6 @@ section.section.sprint-section
             div.sprint-date-top-cover
           div.sprint-date
             = image_tag("brand/circle_white", alt: "logo")
-            / p.start-month = sprint.start.strftime("%b")
-            / p.start-day = sprint.start.strftime("%d")
           = render "sprints/first_card", sprint: sprint
       - else
         div.sprint-container
