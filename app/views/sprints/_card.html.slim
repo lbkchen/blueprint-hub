@@ -1,5 +1,8 @@
 / Variables
 /   - sprint
+/   - is_first
+
+- is_first ||= false
 
 div.sprint-card
   div.sprint-title-box
@@ -9,14 +12,15 @@ div.sprint-card
       h2.subtitle.is-6 = sprint.description
     div.sprint-objectives-box
       - sprint.objectives.each do |objective|
-        div.sprint-objective-box
-          - if objective.completed
-            = fa_icon "star"
-          - else
-            = fa_icon "star-o"
-          p = objective.description
+        = link_to complete_sprint_objective_path(sprint, objective), method: :patch do
+          div.sprint-objective-box
+            - if objective.completed
+              = fa_icon "star"
+            - else
+              = fa_icon "star-o"
+            p = objective.description
   div.sprint-resource-box
     div.field.is-grouped.is-grouped-multiline
       - sprint.resources.each do |resource|
         div.control
-          a.tag.is-link.is-medium href="//#{resource.url}" target="_blank" = resource.name
+          a.tag.is-medium class="#{is_first ? 'is-white' : 'is-link'}" href="//#{resource.url}" target="_blank" = resource.name

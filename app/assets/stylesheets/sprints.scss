@@ -61,6 +61,9 @@ $sprint-accent-color: $blue;
           background-color: $cyan;
           cursor: pointer;
         }
+        > p {
+          color: $white;
+        }
       }
     }
   }
@@ -187,6 +190,7 @@ $sprint-date-width: 100px;
     margin-left: 20px;
     font-size: 14px;
     font-weight: 600;
+    color: $grey-dark;
   }
 }
 

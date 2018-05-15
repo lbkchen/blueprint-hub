@@ -15,7 +15,7 @@ section.section.sprint-section
             div.sprint-date-top-cover
           div.sprint-date
             = image_tag("brand/circle_white", alt: "logo")
-          = render "sprints/first_card", sprint: sprint
+          = render "sprints/card", sprint: sprint, is_first: true
       - else
         div.sprint-container
           div.sprint-date-box
