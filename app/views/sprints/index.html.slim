@@ -14,15 +14,14 @@ section.section.sprint-section
           div.sprint-date-box
             div.sprint-date-top-cover
           div.sprint-date
-            p.start-month = sprint.start.strftime("%b")
-            p.start-day = sprint.start.strftime("%d")
+            = image_tag("brand/circle_white", alt: "logo")
+            / p.start-month = sprint.start.strftime("%b")
+            / p.start-day = sprint.start.strftime("%d")
           = render "sprints/first_card", sprint: sprint
       - else
         div.sprint-container
           div.sprint-date-box
             / Cover ups for pseudoselectors
-            - if i == 0
-              div.sprint-date-top-cover
             - if i + 1 == @sprints.length
               div.sprint-date-bottom-cover
             / Cover ups for pseudoselectors

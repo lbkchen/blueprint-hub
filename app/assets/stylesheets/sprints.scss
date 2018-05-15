@@ -24,6 +24,14 @@ $sprint-accent-color: $blue;
     .sprint-date {
       background-color: $blue;
       color: $white;
+
+      > img {
+        height: 72px;
+        width: 72px;
+        @include animation-name(rotateForever);
+        @include animation-duration(1s);
+        @include animation-iteration-count(infinite);
+      }
     }
     .sprint-date-box:after {
       background-color: $white;
@@ -36,15 +44,23 @@ $sprint-accent-color: $blue;
       h1, h2 {
         color: $white;
       }
+      .sprint-title-box {
+        padding-left: 0px;
+      }
+      .sprint-main-box {
+        padding-left: 0px;
+      }
       .sprint-resource-box {
         background-color: $blue;
+        padding-left: 0px; 
       }
     }
   }
 }
 
+$sprint-date-width: 100px;
 .sprint-date-box {
-  min-width: 80px;
+  min-width: $sprint-date-width;
   position: absolute;
   height: 100%;
 
@@ -76,8 +92,8 @@ $sprint-accent-color: $blue;
 }
 
 .sprint-date {
-  min-width: 80px;
-  margin-right: 5px;
+  min-width: $sprint-date-width;
+  margin-right: 10px;
   padding: 8px 0px;
   @extend .flex-center-col;
   background-color: $white;
