@@ -5,8 +5,60 @@
 $sprint-card-border-radius: 5px;
 $sprint-accent-color: $turquoise;
 
-.sprint-card {
+.sprint-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
   margin-top: 24px;
+
+  &:first-of-type {
+    font-weight: bold; 
+    .sprint-date-box:after {
+      height: 50%;
+      top: 50%;
+    }
+  }
+}
+
+.sprint-date-box {
+  min-width: 80px;
+  position: absolute;
+  height: 100%;
+
+  &:after {
+    background: $grey-lighter;
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    width: 1px;
+  }
+}
+
+.sprint-date-box:first-of-type .sprint-date-box:after {
+  height: 50%;
+  top: 50%;
+}
+
+.sprint-date {
+  min-width: 80px;
+  @extend .flex-center-col;
+  background-color: $white;
+
+  .start-month {
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .start-day {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+}
+
+.sprint-card {
   background-color: $white;
   border: 1px solid transparent;
   border-radius: $sprint-card-border-radius;
@@ -57,7 +109,7 @@ $sprint-accent-color: $turquoise;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 5px 0px; 
+  margin: 6px 0px;
 
   > i {
     font-size: 24px;
@@ -66,6 +118,8 @@ $sprint-accent-color: $turquoise;
 
   > p {
     margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
