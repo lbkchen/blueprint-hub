@@ -10,15 +10,7 @@ $sprint-accent-color: $turquoise;
   flex-direction: row;
   align-items: center;
   position: relative;
-  margin-top: 24px;
-
-  &:first-of-type {
-    font-weight: bold; 
-    .sprint-date-box:after {
-      height: 50%;
-      top: 50%;
-    }
-  }
+  padding: 15px 0px;
 }
 
 .sprint-date-box {
@@ -34,17 +26,32 @@ $sprint-accent-color: $turquoise;
     left: 50%;
     width: 1px;
   }
-}
+  .sprint-date-cover {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: $white;
+    z-index: 500;
+  }
 
-.sprint-date-box:first-of-type .sprint-date-box:after {
-  height: 50%;
-  top: 50%;
+  .sprint-date-top-cover {
+    @extend .sprint-date-cover;
+    top: 0%;
+  }
+
+  .sprint-date-bottom-cover {
+    @extend .sprint-date-cover;
+    top: 50%;
+  }
 }
 
 .sprint-date {
   min-width: 80px;
+  margin-right: 5px;
+  padding: 8px 0px;
   @extend .flex-center-col;
   background-color: $white;
+  z-index: 1000;
 
   .start-month {
     letter-spacing: 1px;
