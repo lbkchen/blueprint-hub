@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $sprint-card-border-radius: 5px;
-$sprint-accent-color: $turquoise;
+$sprint-accent-color: $blue;
 
 .sprint-container {
   display: flex;
@@ -11,6 +11,36 @@ $sprint-accent-color: $turquoise;
   align-items: center;
   position: relative;
   padding: 15px 0px;
+
+  &.current-sprint {
+    border-radius: $sprint-card-border-radius;
+    background-color: $blue;
+    box-shadow: 0 2px 3px rgba($sprint-accent-color, 0.1), 0 0 0 1px rgba($sprint-accent-color, 0.1);
+
+    .sprint-date-top-cover {
+      background-color: $blue;
+      border-top-left-radius: $sprint-card-border-radius
+    }
+    .sprint-date {
+      background-color: $blue;
+      color: $white;
+    }
+    .sprint-date-box:after {
+      background-color: $white;
+    }
+    .sprint-card {
+      box-shadow: none;
+      background-color: $blue;
+      color: $white;
+
+      h1, h2 {
+        color: $white;
+      }
+      .sprint-resource-box {
+        background-color: $blue;
+      }
+    }
+  }
 }
 
 .sprint-date-box {

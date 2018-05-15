@@ -3,7 +3,7 @@
 
 div.sprint-card
   div.sprint-title-box
-    h1.title.is-4 = sprint.name
+    h1.title.is-3 = sprint.name
   div.sprint-main-box
     div.sprint-description-box
       h2.subtitle.is-6 = sprint.description
@@ -19,4 +19,4 @@ div.sprint-card
     div.field.is-grouped.is-grouped-multiline
       - sprint.resources.each do |resource|
         div.control
-          a.tag.is-link.is-medium href="//#{resource.url}" target="_blank" = resource.name
+          a.tag.is-white.is-medium href="//#{resource.url}" target="_blank" = resource.name

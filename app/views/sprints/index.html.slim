@@ -9,16 +9,27 @@ section.section.sprint-section
     div.box.sprint-card.sprint-card--add modal-id="modal-sprint"
       h1.title.is-5 Add new sprint
     - @sprints.each_with_index do |sprint, i|
-      div.sprint-container
-        div.sprint-date-box
-          - if i == 0
+      - if i == 0
+        div.sprint-container.current-sprint
+          div.sprint-date-box
             div.sprint-date-top-cover
-          - if i + 1 == @sprints.length
-            div.sprint-date-bottom-cover
-        div.sprint-date
-          p.start-month = sprint.start.strftime("%b")
-          p.start-day = sprint.start.strftime("%d")
-        = render "sprints/card", sprint: sprint
+          div.sprint-date
+            p.start-month = sprint.start.strftime("%b")
+            p.start-day = sprint.start.strftime("%d")
+          = render "sprints/first_card", sprint: sprint
+      - else
+        div.sprint-container
+          div.sprint-date-box
+            / Cover ups for pseudoselectors
+            - if i == 0
+              div.sprint-date-top-cover
+            - if i + 1 == @sprints.length
+              div.sprint-date-bottom-cover
+            / Cover ups for pseudoselectors
+          div.sprint-date
+            p.start-month = sprint.start.strftime("%b")
+            p.start-day = sprint.start.strftime("%d")
+          = render "sprints/card", sprint: sprint
 
   = render "templates/modal", id: 'modal-sprint', title: "Add new sprint"
     = render "sprints/form"

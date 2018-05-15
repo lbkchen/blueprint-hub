@@ -1,6 +1,6 @@
 class SprintsController < ApplicationController
   def index
-    @sprints = Sprint.all
+    @sprints = Sprint.all.order(start: :desc)
     @sprint = Sprint.new
     3.times { @sprint.objectives.build }
   end
@@ -39,7 +39,7 @@ class SprintsController < ApplicationController
       :end,
       :name,
       :description,
-      :objectives, 
+      :objectives,
       :objectives_attributes
     )
   end
