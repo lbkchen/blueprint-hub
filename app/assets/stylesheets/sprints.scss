@@ -24,6 +24,7 @@ $sprint-accent-color: $blue;
     .sprint-date {
       background-color: $blue;
       color: $white;
+      padding: 0px; 
 
       > img {
         height: 72px;
@@ -35,6 +36,7 @@ $sprint-accent-color: $blue;
     }
     .sprint-date-box:after {
       background-color: $white;
+      width: 2px;
     }
     .sprint-card {
       box-shadow: none;
@@ -52,7 +54,7 @@ $sprint-accent-color: $blue;
       }
       .sprint-resource-box {
         background-color: $blue;
-        padding-left: 0px; 
+        padding-left: 0px;
       }
     }
   }
