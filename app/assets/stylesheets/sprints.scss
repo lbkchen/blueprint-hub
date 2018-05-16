@@ -188,9 +188,13 @@ $sprint-date-width: 100px;
 
   > p {
     margin-left: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    color: $grey-dark;
+    font-size: 15px;
+    font-weight: 400;
+    color: $grey-light;
+
+    &.completed {
+      color: $grey-dark;
+    }
   }
 }
 

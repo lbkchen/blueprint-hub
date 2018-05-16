@@ -16,9 +16,10 @@ div.sprint-card
           div.sprint-objective-box
             - if objective.completed
               = fa_icon "star"
+              p.completed = objective.description
             - else
               = fa_icon "star-o"
-            p = objective.description
+              p = objective.description
   div.sprint-resource-box
     div.field.is-grouped.is-grouped-multiline
       - sprint.resources.each do |resource|
