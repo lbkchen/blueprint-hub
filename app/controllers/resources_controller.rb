@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = CategoryDecorator.decorate_collection(Category.all)
   end
 
   def new

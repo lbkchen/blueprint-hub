@@ -1,13 +1,21 @@
 class ResourceDecorator < Draper::Decorator
   delegate_all
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+  def icon_name
+    case object.doctype
+    when 'document'
+      return 'file-excel-o'
+    when 'pdf'
+      return 'file-pdf-o'
+    when 'spreadsheet'
+      return 'file-excel-o'
+    when 'media'
+      return 'file-video-o'
+    when 'other'
+      return 'question'
+    else
+      return 'question'
+    end
+  end
 
 end

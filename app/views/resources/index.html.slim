@@ -11,4 +11,5 @@ section.section.
         - category.resources.each do |resource|
           = link_to "//#{resource.url}" do
             div.resource-box
+              = fa_icon resource.icon_name
               p = resource.name

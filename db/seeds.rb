@@ -62,6 +62,7 @@ def create_resources
       resource = sprint.resources.create(
         name: FFaker::CheesyLingo.title,
         url: FFaker::Youtube.url,
+        doctype: Random.rand(5), 
       )
       CategoriesResource.create(
         category_id: Random.rand(1..Category.count),

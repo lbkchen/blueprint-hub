@@ -8,17 +8,18 @@
 #  sprint_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  doctype    :integer          default(0)
 #
 
 class Resource < ApplicationRecord
   belongs_to :sprint, optional: true
   has_and_belongs_to_many :categories
 
-  enum type: {
+  enum doctype: {
     document: 0,
     pdf: 1,
     spreadsheet: 2,
     media: 3,
-    other: 4, 
+    other: 4,
   }
 end
