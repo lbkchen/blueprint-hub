@@ -9,5 +9,6 @@ section.section.
     - @categories.each do |category|
       div.category-box
         - category.resources.each do |resource|
-          = resource.name
-          = resource.url
+          = link_to "//#{resource.url}" do
+            div.resource-box
+              p = resource.name

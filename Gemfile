@@ -43,6 +43,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'simple_form'
 gem 'font-awesome-rails'
+gem 'draper', '~> 3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
