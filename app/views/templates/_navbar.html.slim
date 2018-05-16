@@ -3,7 +3,14 @@ nav.navbar.is-link
     a.navbar-item href="/"
       = image_tag("brand/logo_negative", alt: "logo", height: "30")
       h1.nav-title.subtitle.is-4.has-text-white blueprint hub
-    div.navbar-burger.burger data-target="navbarMenuHeroB"
+    div.navbar-burger.burger data-target="navbar-menu"
       span
       span
       span
+
+  div.navbar-menu id="navbar-menu"
+    div.navbar-end
+      div.navbar-item
+        div.field.is-grouped
+          p.control
+            = link_to "Sign In", new_user_session_path, class: "button is-link is-inverted is-outlined"
