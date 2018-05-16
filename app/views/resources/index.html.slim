@@ -7,6 +7,7 @@ section.section.
   div.container
     h1.title.is-4 Resources
     - @categories.each do |category|
-      - category.resources.each do |resource|
-        = resource.name
-        = resource.url
+      div.category-box
+        - category.resources.each do |resource|
+          = resource.name
+          = resource.url
