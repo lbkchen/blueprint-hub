@@ -4,9 +4,9 @@
 
 section.section.sprint-section
   div.container
-    h1.title.is-4 Sprints
-    div.box.sprint-card.sprint-card--add modal-id="modal-sprint"
-      h1.title.is-5 Add new sprint
+    h1.title.is-3 Sprints
+    / div.box.sprint-card.sprint-card--add modal-id="modal-sprint"
+    /   h1.title.is-5 Add new sprint
     - @sprints.each_with_index do |sprint, i|
       - if i == 0
         div.sprint-container.current-sprint
