@@ -6,10 +6,15 @@ section.hero.is-primary.is-medium
 section.section.
   div.container
     h1.title.is-4 Resources
-    - @categories.each do |category|
-      div.category-box
-        - category.resources.each do |resource|
-          = link_to "//#{resource.url}" do
-            div.resource-box
-              = fa_icon resource.icon_name
-              p = resource.name
+    div.categories-container
+      - @categories.each do |category|
+        div.category-box.card
+          header.card-header
+            p.card-header-title = category.name
+          div.card-content
+            div.content
+              - category.resources.each do |resource|
+                = link_to "//#{resource.url}", target: :_blank do
+                  div.resource-box
+                    p = resource.name
+                    = fa_icon resource.icon_name, class: "#{resource.icon_color}"
