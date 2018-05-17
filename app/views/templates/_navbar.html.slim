@@ -13,4 +13,11 @@ nav.navbar.is-link
       div.navbar-item
         div.field.is-grouped
           p.control
-            = link_to "Sign In", new_user_session_path, class: "button is-link is-inverted is-outlined"
+          - if user_signed_in?
+            p.control
+              = link_to "Admin", rails_admin_path, class: "button is-link is-inverted is-outlined"
+            p.control
+              = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button is-link is-inverted is-outlined"
+          - else
+            p.control
+              = link_to "Sign In", new_user_session_path, class: "button is-link is-inverted is-outlined"
