@@ -144,23 +144,24 @@ $sprint-date-width: 100px;
 }
 
 .sprint-title-box {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .sprint-main-box {
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
 .sprint-description-box {
-  max-width: 50%;
+  min-width: 50%;
   margin-right: 20px;
 }
 
 .sprint-objectives-box {
+  min-width: 40%;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -200,7 +201,7 @@ $sprint-date-width: 100px;
 
 .sprint-resource-box {
   background-color: $white-ter;
-  padding: 1.25rem;
+  padding: 1.5rem;
   border-bottom-right-radius: $sprint-card-border-radius;
   border-bottom-left-radius: $sprint-card-border-radius;
 }
