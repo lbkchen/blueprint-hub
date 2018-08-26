@@ -37,13 +37,28 @@ role :integer
 ```
 start :date
 end :date
-name :string 
+name :string
 has_many :resources
 ```
 
 ### Resource
 ```
 belongs_to :sprint, optional
-name: string
-url: string
+name :string
+url :string
+```
+
+### Badge
+```
+icon_id :integer
+name :string
+```
+
+### User Badge
+```
+belongs_to :user
+belongs_to :badge
+is_consumed :boolean
+date_consumed :date
+description :text
 ```
